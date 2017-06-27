@@ -1,0 +1,10 @@
+﻿  ANSI_UTF16_Converter.cpp
+  File_Struct.cpp
+  idxcrypt.cpp
+  Linux_File.cpp
+  mem_impl.cpp
+  MyLinuxSysFunctions.cpp
+  Win32_File.cpp
+  Generating Code...
+  idxcrypt.vcxproj -> C:\Users\idras\Source\Repos\idxcrypt\x64\Debug\idxcrypt.exe
+  idxcrypt.vcxproj -> C:\Users\idras\Source\Repos\idxcrypt\x64\Debug\idxcrypt.pdb (Full PDB)

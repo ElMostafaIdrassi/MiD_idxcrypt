@@ -22,29 +22,34 @@
     <ProjectGuid>{1F0A59B5-FA25-41D4-A24B-397C41A9252C}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>idxcrypt</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <CharacterSet>Unicode</CharacterSet>
+    <CharacterSet>NotSet</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <CharacterSet>Unicode</CharacterSet>
+    <CharacterSet>NotSet</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <WholeProgramOptimization>true</WholeProgramOptimization>
-    <CharacterSet>Unicode</CharacterSet>
+    <CharacterSet>NotSet</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <WholeProgramOptimization>true</WholeProgramOptimization>
-    <CharacterSet>Unicode</CharacterSet>
+    <CharacterSet>NotSet</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -81,7 +86,10 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <AdditionalIncludeDirectories>$(SolutionDir)MiD_PBKDF2/include;$(SolutionDir)openssl/include;$(SolutionDir)MiD_AesLib/include;$(SolutionDir)MiDHashLib/include;$(SolutionDir)MiDHmacLib/include;</AdditionalIncludeDirectories>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <MinimalRebuild>false</MinimalRebuild>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -90,6 +98,8 @@
       </StackReserveSize>
       <StackCommitSize>
       </StackCommitSize>
+      <AdditionalLibraryDirectories>$(SolutionDir)/MiD_PBKDF2/lib/$(PlatformArchitecture)/$(Configuration);$(SolutionDir)/MiD_AesLib/lib/$(PlatformArchitecture)/$(Configuration);$(SolutionDir)/MiDHashLib/lib/$(PlatformArchitecture)/$(Configuration);$(SolutionDir)/MiDHmacLib/lib/$(PlatformArchitecture)/$(Configuration);$(SolutionDir)/openssl/lib/$(PlatformArchitecture)/$(Configuration);</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Shlwapi.lib;MiD_PBKDF2_Static.lib;MiDAesLib_Static.lib;MiDHashLib_Static.lib;MiDHmacLib_Static.lib;libeay32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -99,7 +109,10 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <AdditionalIncludeDirectories>$(SolutionDir)MiD_PBKDF2/include;$(SolutionDir)openssl/include;$(SolutionDir)MiD_AesLib/include;$(SolutionDir)MiDHashLib/include;$(SolutionDir)MiDHmacLib/include;</AdditionalIncludeDirectories>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <MinimalRebuild>false</MinimalRebuild>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -108,6 +121,8 @@
       </StackReserveSize>
       <StackCommitSize>
       </StackCommitSize>
+      <AdditionalLibraryDirectories>$(SolutionDir)/MiD_PBKDF2/lib/$(PlatformArchitecture)/$(Configuration);$(SolutionDir)/MiD_AesLib/lib/$(PlatformArchitecture)/$(Configuration);$(SolutionDir)/MiDHashLib/lib/$(PlatformArchitecture)/$(Configuration);$(SolutionDir)/MiDHmacLib/lib/$(PlatformArchitecture)/$(Configuration);$(SolutionDir)/openssl/lib/$(PlatformArchitecture)/$(Configuration);</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Shlwapi.lib;MiD_PBKDF2_Static.lib;MiDAesLib_Static.lib;MiDHashLib_Static.lib;MiDHmacLib_Static.lib;libeay32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -119,7 +134,8 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <AdditionalIncludeDirectories>$(SolutionDir)MiD_PBKDF2/include;$(SolutionDir)openssl/include;$(SolutionDir)MiD_AesLib/include;$(SolutionDir)MiDHashLib/include;$(SolutionDir)MiDHmacLib/include;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -130,6 +146,8 @@
       </StackCommitSize>
       <StackReserveSize>
       </StackReserveSize>
+      <AdditionalLibraryDirectories>$(SolutionDir)/MiD_PBKDF2/lib/$(PlatformArchitecture)/$(Configuration);$(SolutionDir)/MiD_AesLib/lib/$(PlatformArchitecture)/$(Configuration);$(SolutionDir)/MiDHashLib/lib/$(PlatformArchitecture)/$(Configuration);$(SolutionDir)/MiDHmacLib/lib/$(PlatformArchitecture)/$(Configuration);$(SolutionDir)/openssl/lib/$(PlatformArchitecture)/$(Configuration);</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Shlwapi.lib;MiD_PBKDF2_Static.lib;MiDAesLib_Static.lib;MiDHashLib_Static.lib;MiDHmacLib_Static.lib;libeay32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
       <Command>
@@ -145,7 +163,8 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <AdditionalIncludeDirectories>$(SolutionDir)MiD_PBKDF2/include;$(SolutionDir)openssl/include;$(SolutionDir)MiD_AesLib/include;$(SolutionDir)MiDHashLib/include;$(SolutionDir)MiDHmacLib/include;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -156,6 +175,8 @@
       </StackCommitSize>
       <StackReserveSize>
       </StackReserveSize>
+      <AdditionalLibraryDirectories>$(SolutionDir)/MiD_PBKDF2/lib/$(PlatformArchitecture)/$(Configuration);$(SolutionDir)/MiD_AesLib/lib/$(PlatformArchitecture)/$(Configuration);$(SolutionDir)/MiDHashLib/lib/$(PlatformArchitecture)/$(Configuration);$(SolutionDir)/MiDHmacLib/lib/$(PlatformArchitecture)/$(Configuration);$(SolutionDir)/openssl/lib/$(PlatformArchitecture)/$(Configuration);</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Shlwapi.lib;MiD_PBKDF2_Static.lib;MiDAesLib_Static.lib;MiDHashLib_Static.lib;MiDHmacLib_Static.lib;libeay32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
       <Command>
@@ -163,10 +184,22 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ANSI_UTF16_Converter.cpp" />
+    <ClCompile Include="File_Struct.cpp" />
     <ClCompile Include="idxcrypt.cpp" />
+    <ClCompile Include="Linux_File.cpp" />
+    <ClCompile Include="mem_impl.cpp" />
+    <ClCompile Include="MyLinuxSysFunctions.cpp" />
+    <ClCompile Include="Win32_File.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ANSI_UTF16_Converter.h" />
+    <ClInclude Include="File_Struct.h" />
+    <ClInclude Include="Linux_File.h" />
+    <ClInclude Include="mem_impl.h" />
+    <ClInclude Include="MyLinuxSysFunctions.h" />
     <ClInclude Include="resource.h" />
+    <ClInclude Include="Win32_File.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="idxcrypt.rc" />
