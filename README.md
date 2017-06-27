@@ -1,15 +1,19 @@
 # MiD_idxcrypt
 
 A fork of idxcrypt originally created by Mounir IDRASSI.
+
 Small Windows/Linux utility for strong file encryption based on AES-CBC-256 and strong PBKDF2 key derivation.
 
 The AES256 key is derived from password using PBKDF2 with 500000 iterations.
+
 PBKDF2 supports SHA-256, SHA-384, SHA-512. SHA-256 is the default.
+
 CBC mode is used for AES with a randomly generated IV that is unique to each file.
+
 For PBKDF2, a random salt is generated for each file to protect again Rainbow-table attacks. It has a size of 16 bytes when SHA-256 is used and a size of 64 bytes otherwise.
 
-All cryptographic operations are done using MiDAesLib_Static, MiDHashLib_Static, MiDHmacLib_Static and MiD_PBKDF2_Static, 
-4 small open-source libraries which provide high-level APIs to perform AES, Hashing, Hmac and PBKDF2-Hmac operations.
+All cryptographic operations are done using ```MiDAesLib_Static```, ```MiDHashLib_Static```, ```MiDHmacLib_Static``` and ```MiD_PBKDF2_Static```, 4 small open-source libraries which provide high-level APIs to perform AES, Hashing, Hmac and PBKDF2-Hmac operations.
+
 These libraries make use of OpenSSL Crypto API, and can be found here : <https://github.com/ElMostafaIdrassi>
 
 -------------------------------------------------------------------------------------------------
