@@ -27,3 +27,7 @@
 *.exe
 *.out
 *.app
+
+# somefile.VC.VC.opendb process already in use problem
+*.VC.opendb
+*.VC.db
