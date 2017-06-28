@@ -40,9 +40,9 @@ See http://www.openssl.org/source/license.html for details
 
 Usage : 
 
- - To encrypt an entire folder : idxcrypt InputFolder Password OutputFolder [/d] [/hash algo]
+ - To encrypt an entire folder : MiD_idxcrypt InputFolder Password OutputFolder [/d] [/hash algo]
  
- - To encrypt a file : idxcrypt InputFile Password OutputFile [/d] [/hash_algo]
+ - To encrypt a file : MiD_idxcrypt InputFile Password OutputFile [/d] [/hash_algo]
 
 If /d is omitted, then an encryption is performed.
 If /d is specified, then a decryption is performed.
