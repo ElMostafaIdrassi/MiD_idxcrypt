@@ -18,6 +18,21 @@ These libraries make use of OpenSSL Crypto API, and can be found here : <https:/
 
 -------------------------------------------------------------------------------------------------
 
+Usage : 
+
+ - To encrypt an entire folder : MiD_idxcrypt InputFolder Password OutputFolder [/d] [/hash algo]
+ 
+ - To encrypt a file : MiD_idxcrypt InputFile Password OutputFile [/d] [/hash_algo]
+
+If /d is omitted, then an encryption is performed.
+If /d is specified, then a decryption is performed.
+
+If /hash is ommited, the SHA-256 is used by PBKDF2.
+if /hash is specified, then the hash algorithm indicated by algo parameter is used.
+Possible values for algo are: sha256, sha384 and sha512.
+
+-------------------------------------------------------------------------------------------------
+
 Copyright (c) 2017 
 
 El Mostafa IDRASSI <mostafa.idrassi@tutanota.com>. 
@@ -37,16 +52,3 @@ Contents licensed under the terms of the OpenSSL license
 See http://www.openssl.org/source/license.html for details
 
 -------------------------------------------------------------------------------------------------
-
-Usage : 
-
- - To encrypt an entire folder : MiD_idxcrypt InputFolder Password OutputFolder [/d] [/hash algo]
- 
- - To encrypt a file : MiD_idxcrypt InputFile Password OutputFile [/d] [/hash_algo]
-
-If /d is omitted, then an encryption is performed.
-If /d is specified, then a decryption is performed.
-
-If /hash is ommited, the SHA-256 is used by PBKDF2.
-if /hash is specified, then the hash algorithm indicated by algo parameter is used.
-Possible values for algo are: sha256, sha384 and sha512.
