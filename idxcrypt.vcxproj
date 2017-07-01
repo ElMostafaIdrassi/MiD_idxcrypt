@@ -87,9 +87,10 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
-      <AdditionalIncludeDirectories>$(SolutionDir)MiD_PBKDF2/include;$(SolutionDir)openssl/include;$(SolutionDir)MiD_AesLib/include;$(SolutionDir)MiDHashLib/include;$(SolutionDir)MiDHmacLib/include;</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)MiD_PBKDF2/include;$(SolutionDir)openssl/include;$(SolutionDir)MiDAesLib/include;$(SolutionDir)MiDHashLib/include;$(SolutionDir)MiDHmacLib/include;</AdditionalIncludeDirectories>
       <DebugInformationFormat>OldStyle</DebugInformationFormat>
       <MinimalRebuild>false</MinimalRebuild>
+      <ControlFlowGuard>Guard</ControlFlowGuard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -110,9 +111,10 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
-      <AdditionalIncludeDirectories>$(SolutionDir)MiD_PBKDF2/include;$(SolutionDir)openssl/include;$(SolutionDir)MiD_AesLib/include;$(SolutionDir)MiDHashLib/include;$(SolutionDir)MiDHmacLib/include;</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)MiD_PBKDF2/include;$(SolutionDir)openssl/include;$(SolutionDir)MiDAesLib/include;$(SolutionDir)MiDHashLib/include;$(SolutionDir)MiDHmacLib/include;</AdditionalIncludeDirectories>
       <DebugInformationFormat>OldStyle</DebugInformationFormat>
       <MinimalRebuild>false</MinimalRebuild>
+      <ControlFlowGuard>Guard</ControlFlowGuard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -135,7 +137,8 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
-      <AdditionalIncludeDirectories>$(SolutionDir)MiD_PBKDF2/include;$(SolutionDir)openssl/include;$(SolutionDir)MiD_AesLib/include;$(SolutionDir)MiDHashLib/include;$(SolutionDir)MiDHmacLib/include;</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)MiD_PBKDF2/include;$(SolutionDir)openssl/include;$(SolutionDir)MiDAesLib/include;$(SolutionDir)MiDHashLib/include;$(SolutionDir)MiDHmacLib/include;</AdditionalIncludeDirectories>
+      <ControlFlowGuard>Guard</ControlFlowGuard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -164,7 +167,8 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
-      <AdditionalIncludeDirectories>$(SolutionDir)MiD_PBKDF2/include;$(SolutionDir)openssl/include;$(SolutionDir)MiD_AesLib/include;$(SolutionDir)MiDHashLib/include;$(SolutionDir)MiDHmacLib/include;</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)MiD_PBKDF2/include;$(SolutionDir)openssl/include;$(SolutionDir)MiDAesLib/include;$(SolutionDir)MiDHashLib/include;$(SolutionDir)MiDHmacLib/include;</AdditionalIncludeDirectories>
+      <ControlFlowGuard>Guard</ControlFlowGuard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

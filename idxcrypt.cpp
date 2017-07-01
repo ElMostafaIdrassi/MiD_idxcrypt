@@ -68,7 +68,7 @@
 
 void ShowUsage()
 {
-	printf("\nMiD_idxcrypt - Simple yet Strong file encryptor. By IDRASSI Mounir (mounir@idrix.fr)\n\nCopyright 2017 IDRIX\n\n\n");
+	printf("\nMiD_idxcrypt - Simple yet Strong file encryptor. By El Mostafa IDRASSI (mostafa.idrassi@tutanota.com)\n\nCopyright 2017\n\n\n");
 	printf("To encrypt an entire folder : MiD_idxcrypt InputFolder Password OutputFolder [/d] [/hash algo]\n");
 	printf("\tInputFolder example : C:\\inputFolder (absolute path) or inputFolder (relative path to the current working directory) \n");
 	printf("\tOutputFolder example : C:\\outputFolder (absolute path) or outputFolder (relative path to the current working directory) \n\n");
@@ -302,7 +302,7 @@ int main(int argc, char* argv[])
 				setvbuf(stdin, NULL, _IONBF, 0);
 
 #ifdef _WIN32
-				// protect password memory against swaping //
+				// protect password memory against swaping
 				VirtualLock(szPassword, sizeof(szPassword));
 #else
 #ifdef __linux__
@@ -313,7 +313,7 @@ int main(int argc, char* argv[])
 				memcpy(szPassword, argv[2], strlen(argv[2]));	// copies the trailing \0, argv arguments are always null terminated
 
 #ifdef _WIN32
-																// clear the password in the command line //
+				// clear the password in the command line
 				SecureZeroMemory(argv[2], strlen(argv[2]));
 #else
 #ifdef __linux__
@@ -325,7 +325,7 @@ int main(int argc, char* argv[])
 				iStatus = RootFile->Op(prf, szPassword, cbSalt, bForDecrypt);
 
 #ifdef _WIN32
-				// clear the password in szPassword //
+				// clear the password in szPassword
 				SecureZeroMemory(szPassword, sizeof(szPassword));
 #else
 #ifdef __linux__
